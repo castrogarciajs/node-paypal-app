@@ -6,7 +6,7 @@ import {
 } from "../../setup.js";
 import axios from "axios";
 
-export async function createOrder() {
+export async function createOrder(req, res) {
   const order = {
     intent: "CAPTURE",
     purchase_untis: [
@@ -42,6 +42,10 @@ export async function createOrder() {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
+  });
+
+  return res.json({
+    response: { ...res },
   });
 }
 
