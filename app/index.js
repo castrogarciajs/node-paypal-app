@@ -1,8 +1,8 @@
 import Express from "express";
 import routesPayment from "./routes/payment_routes.js";
+import { PORT } from "../setup.js";
 
 const Application = Express();
-const PORT = 3000;
 
 Application.use(routesPayment);
 
