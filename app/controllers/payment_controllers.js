@@ -1,3 +1,5 @@
+import { HOST } from "../../setup.js";
+
 export function createOrder() {
   const order = {
     intent: "CAPTURE",
@@ -9,6 +11,12 @@ export function createOrder() {
         },
       },
     ],
+    application_contenxt: {
+      brand_name: "My short",
+      landing_page: "NO_PREFERENCE",
+      user_action: "PAY_NOW",
+      return_url: `${HOST}/capture-order`,
+    },
   };
 }
 
