@@ -16,6 +16,7 @@ export function createOrder() {
       landing_page: "NO_PREFERENCE",
       user_action: "PAY_NOW",
       return_url: `${HOST}/capture-order`,
+      cancel_url: `${HOST}/cancel-order`,
     },
   };
 }
