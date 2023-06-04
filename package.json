@@ -1,11 +1,12 @@
 {
   "name": "node-paypal-ap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "paypal with Nodejs",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./app/index.js",
+    "start": "node ./app/index.js"
   },
   "keywords": [],
   "author": "sebastian009w",
