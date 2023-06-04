@@ -1,2 +1,3 @@
-# node-paypal-ap
-Paypal with nodejs api 
+# node-paypal-app
+
+Paypal with nodejs api
