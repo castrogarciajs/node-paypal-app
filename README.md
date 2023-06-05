@@ -1,3 +1,4 @@
-# node-paypal-app
+<img src="./docs/nodejs.png" width="200"/>
+<img src="./docs/paypal.png" width="200"/>
 
-Paypal with nodejs api
+# Nodejs with Paypal
