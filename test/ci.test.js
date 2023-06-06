@@ -1,7 +1,20 @@
-test("should return true", () => {
-  expect(true);
+import Application from "../app/app.js";
+import request from "supertest";
+import { PORT } from "../setup.js";
+
+let server;
+
+beforeEach(() => {
+  server = Application.listen(PORT);
 });
 
-test("should return example", () => {
-  expect(1 + 1).toBe(2);
+afterAll(() => {
+  server.close();
+});
+
+test("should return status 404", async () => {
+  const res = await request(Application).get("/");
+
+  expect(res.status).toBe(404);
+  expect(res.status).not.toBe(200);
 });
