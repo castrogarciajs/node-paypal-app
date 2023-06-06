@@ -12,7 +12,7 @@ afterAll(() => {
   server.close();
 });
 
-test("should return true", async () => {
+test("should return status 404", async () => {
   const res = await request(Application).get("/");
 
   expect(res.status).toBe(404);
