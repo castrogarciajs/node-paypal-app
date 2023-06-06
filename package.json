@@ -1,6 +1,6 @@
 {
   "name": "node-paypal-ap",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "paypal with Nodejs",
   "main": "index.js",
   "type": "module",
