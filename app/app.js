@@ -1,5 +1,5 @@
 import Express from "express";
-import routesPayment from "./routes/payment_routes.js";
+import routesPayment from "./src/routes/payment_routes.js";
 import cors from "cors";
 
 const Application = Express();

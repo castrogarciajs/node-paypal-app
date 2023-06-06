@@ -3,7 +3,7 @@ import {
   PAYPAL_API_URL,
   PAYPAL_CLIENT,
   PAYPAL_KEY,
-} from "../../setup.js";
+} from "../../../setup.js";
 import axios from "axios";
 
 export async function createOrder(_, res) {
