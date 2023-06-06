@@ -38,14 +38,14 @@ export async function createOrder(req, res) {
     },
   });
 
-  const res = await axios.post(`${PAYPAL_API_URL}/v2/checkout/orders`, order, {
+  const resp = await axios.post(`${PAYPAL_API_URL}/v2/checkout/orders`, order, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
   });
 
   return res.json({
-    response: { ...res },
+    response: { ...resp },
   });
 }
 
