@@ -1,6 +1,7 @@
 import Application from "../app/app.js";
 import request from "supertest";
 import { PORT } from "../setup.js";
+import { test } from "vitest";
 
 let server;
 
@@ -24,4 +25,9 @@ test("should return status 200", async () => {
 
   expect(res.status).toBe(200);
   expect(res.status).not.toBe(404);
+});
+
+test("should return data", async () => {
+  const res = await request(Application).get("/create-order");
+  expect(res.text).toBeDefined();
 });
