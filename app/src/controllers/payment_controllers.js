@@ -50,14 +50,29 @@ export async function createOrder(_, res) {
       }
     );
 
-    return res.json({
-      response: response.data,
-    });
+    return res.json(response.data);
   } catch (error) {
     return res.status(500).json({ error: "Error server" });
   }
 }
 
-export function captureOrder() {}
+export async function captureOrder(req, res) {
+  const { token } = req.query;
+
+  const response = await axios.post(
+    `${PAYPAL_API_URL}/v2/checkout/orders/${token}/capture`,
+    null,
+    {
+      auth: {
+        username: PAYPAL_CLIENT,
+        password: PAYPAL_KEY,
+      },
+    }
+  );
+
+  console.log(response.data);
+
+  return res.send("pagado");
+}
 
 export function cancelOrder() {}
