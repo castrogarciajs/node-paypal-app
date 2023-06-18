@@ -61,7 +61,7 @@ export async function captureOrder(req, res) {
 
   const response = await axios.post(
     `${PAYPAL_API_URL}/v2/checkout/orders/${token}/capture`,
-    null,
+    {},
     {
       auth: {
         username: PAYPAL_CLIENT,
