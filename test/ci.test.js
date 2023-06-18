@@ -1,10 +1,11 @@
 import Application from "../app/app.js";
 import request from "supertest";
 import { PORT } from "../setup.js";
+import { test } from "vitest";
 
 let server;
 
-beforeEach(() => {
+beforeAll(() => {
   server = Application.listen(PORT);
 });
 
@@ -17,4 +18,16 @@ test("should return status 404", async () => {
 
   expect(res.status).toBe(404);
   expect(res.status).not.toBe(200);
+});
+
+test("should return status 200", async () => {
+  const res = await request(Application).get("/create-order");
+
+  expect(res.status).toBe(200);
+  expect(res.status).not.toBe(404);
+});
+
+test("should return data", async () => {
+  const res = await request(Application).get("/create-order");
+  expect(res.text).toBeDefined();
 });
