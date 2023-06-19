@@ -75,4 +75,6 @@ export async function captureOrder(req, res) {
   return res.send("pagado");
 }
 
-export function cancelOrder() {}
+export function cancelOrder(_, res) {
+  res.send("cancel order");
+}
