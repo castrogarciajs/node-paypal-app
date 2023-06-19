@@ -23,7 +23,7 @@ export async function createOrder(_, res) {
         landing_page: "NO_PREFERENCE",
         user_action: "PAY_NOW",
         return_url: `${HOST}/capture-order`,
-        cancel_url: `${HOST}/cancel-payment`,
+        cancel_url: `${HOST}/cancel-order`,
       },
     };
 
@@ -76,5 +76,5 @@ export async function captureOrder(req, res) {
 }
 
 export function cancelOrder(_, res) {
-  res.send("cancel order");
+  return res.redirect("/");
 }
