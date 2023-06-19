@@ -8,7 +8,7 @@ const Application = Express();
 
 Application.use(morgan("dev"));
 Application.use(cors());
-Application.use(Express.static(path.resolve("src/public")));
+Application.use(Express.static(path.resolve("app/src/public")));
 Application.use(routesPayment);
 
 export default Application;

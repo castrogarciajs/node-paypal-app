@@ -7,9 +7,7 @@ import {
 
 const routesPayment = Router();
 
-routesPayment.get("/");
-
-routesPayment.get("/create-order", createOrder);
+routesPayment.post("/create-order", createOrder);
 routesPayment.get("/capture-order", captureOrder);
 routesPayment.get("/cancel-order", cancelOrder);
 
