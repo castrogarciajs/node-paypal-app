@@ -3,7 +3,7 @@
 <img src="./docs/paypal.png" width="200"/>
 
 </p>
-
+----
 # Nodejs with Paypal
 
 "explorador": "ctrl + shift + e"
